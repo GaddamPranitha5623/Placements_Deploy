@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+langchain
+langchain-community
+langchain-core
+langchain-google-genai
+pdfplumber
+requests
+python-multipart
