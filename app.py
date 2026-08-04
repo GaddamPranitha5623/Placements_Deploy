@@ -23,9 +23,9 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 # Retrieve the API key from secrets, making this cell robust
 
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API")
 
-if not GOOGLE_API:
+if not GOOGLE_API_KEY:
     print("Error: GOOGLE_API_KEY not set. Please configure it in Render environment variables.")
 
 llm = ChatGoogleGenerativeAI(
