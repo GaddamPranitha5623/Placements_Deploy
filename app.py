@@ -15,7 +15,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from google.colab import userdata # Import userdata
 
 # Install missing libraries
-!pip install pdfplumber
+#!pip install pdfplumber
 
 # ---------- LLM (Gemini) setup ----------
 # GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY") # Original line
