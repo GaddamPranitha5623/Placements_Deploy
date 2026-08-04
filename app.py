@@ -21,11 +21,12 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 # GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY") # Original line
 
 # Retrieve the API key from secrets, making this cell robust
-try:
-  GOOGLE_API_KEY = userdata.get('GOOGLE_API')
-except userdata.SecretNotFoundError:
-  print("Error: GOOGLE_API not found. Please ensure it's set in Colab secrets.")
-  GOOGLE_API_KEY = None # Set to None or handle as appropriate if API key is critical
+
+
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
+if not GOOGLE_API:
+    print("Error: GOOGLE_API_KEY not set. Please configure it in Render environment variables.")
 
 llm = ChatGoogleGenerativeAI(
     model="gemini-1.5-flash",   # or gemini-1.5-pro if available
