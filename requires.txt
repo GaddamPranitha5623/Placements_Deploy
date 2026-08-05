@@ -1,9 +1,11 @@
 fastapi
-uvicorn
+uvicorn[standard]
+langserve[server]
 langchain
-langchain-community
 langchain-core
 langchain-google-genai
 pdfplumber
 requests
 python-multipart
+pydantic
+sse-starlette
